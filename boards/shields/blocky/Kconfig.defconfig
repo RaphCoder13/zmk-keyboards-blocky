@@ -1,0 +1,34 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_BLOCKY_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Blocky"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+# enable pointing device
+config ZMK_POINTING
+    default y
+
+
+endif
+
+# IF SHIELD_BLOCKY_LEFT
+
+# CONFIG ZMK_KEYBOARD_NAME
+#     DEFAULT "BLOCKY LEFT"
+
+# CONFIG ZMK_SPLIT_ROLE_CENTRAL
+#     DEFAULT Y
+
+# ENDIF
+
+if SHIELD_BLOCKY_LEFT || SHIELD_BLOCKY_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
