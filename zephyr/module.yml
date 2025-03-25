@@ -1,4 +1,4 @@
-name: blocky-zmk-module
+name: zmk-keyboard-blocky
 build:
   settings:
     board_root: .
