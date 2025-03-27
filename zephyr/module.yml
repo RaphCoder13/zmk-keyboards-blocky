@@ -1,6 +1,4 @@
 name: zmk-keyboards-blocky
 build:
-  # cmake: .
-  # kconfig: Kconfig
   settings:
     board_root: .
