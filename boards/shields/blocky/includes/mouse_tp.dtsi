@@ -148,6 +148,7 @@
       //
       // These values are allowed: 10,20,40,60,80,100,200
       // sampling-rate = <60>;
+      sampling-rate =<80>;
 
 
       // Disables clicking.
