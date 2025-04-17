@@ -6,6 +6,9 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 #ifdef HAS_MOUSE_TP
   // We store the trackpoint settings in a separate file
@@ -96,17 +99,8 @@
             ;
     };
 
-    // ps2_gpio: ps2_gpio {
-    //     compatible = "zmk,ps2-gpio";
-    //     status = "disabled";
-    //     sda-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    //     scl-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    //     rst-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    // };
-
-    // ps2_input_listener: ps2_input_listener {
-    //     compatible = "zmk,input-listener";
-    //     status = "disabled";
-    //     devices = <&ps2_gpio>;
-    // };
+    trackpoint_listener: trackpoint_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+    };
 };
